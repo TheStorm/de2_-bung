@@ -32,10 +32,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.artikelNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bezeichnungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beschreibungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bildDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.de2projektlagerverwaltungDataSet3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.de2_projekt_lagerverwaltungDataSet3 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3();
             this.artikelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.de2_projekt_lagerverwaltungDataSet2 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet2();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,12 +46,22 @@
             this.artikelTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet2TableAdapters.ArtikelTableAdapter();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.artikelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.artikelTableAdapter1 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3TableAdapters.ArtikelTableAdapter();
+            this.artikelNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bezeichnungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beschreibungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bildDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2projektlagerverwaltungDataSet3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -85,36 +93,21 @@
             this.bezeichnungDataGridViewTextBoxColumn,
             this.beschreibungDataGridViewTextBoxColumn,
             this.bildDataGridViewImageColumn});
-            this.dataGridView1.DataSource = this.artikelBindingSource;
+            this.dataGridView1.DataSource = this.artikelBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(434, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 2;
             // 
-            // artikelNrDataGridViewTextBoxColumn
+            // de2projektlagerverwaltungDataSet3BindingSource
             // 
-            this.artikelNrDataGridViewTextBoxColumn.DataPropertyName = "Artikel_Nr";
-            this.artikelNrDataGridViewTextBoxColumn.HeaderText = "Artikel_Nr";
-            this.artikelNrDataGridViewTextBoxColumn.Name = "artikelNrDataGridViewTextBoxColumn";
-            this.artikelNrDataGridViewTextBoxColumn.ReadOnly = true;
+            this.de2projektlagerverwaltungDataSet3BindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet3;
+            this.de2projektlagerverwaltungDataSet3BindingSource.Position = 0;
             // 
-            // bezeichnungDataGridViewTextBoxColumn
+            // de2_projekt_lagerverwaltungDataSet3
             // 
-            this.bezeichnungDataGridViewTextBoxColumn.DataPropertyName = "Bezeichnung";
-            this.bezeichnungDataGridViewTextBoxColumn.HeaderText = "Bezeichnung";
-            this.bezeichnungDataGridViewTextBoxColumn.Name = "bezeichnungDataGridViewTextBoxColumn";
-            // 
-            // beschreibungDataGridViewTextBoxColumn
-            // 
-            this.beschreibungDataGridViewTextBoxColumn.DataPropertyName = "Beschreibung";
-            this.beschreibungDataGridViewTextBoxColumn.HeaderText = "Beschreibung";
-            this.beschreibungDataGridViewTextBoxColumn.Name = "beschreibungDataGridViewTextBoxColumn";
-            // 
-            // bildDataGridViewImageColumn
-            // 
-            this.bildDataGridViewImageColumn.DataPropertyName = "Bild";
-            this.bildDataGridViewImageColumn.HeaderText = "Bild";
-            this.bildDataGridViewImageColumn.Name = "bildDataGridViewImageColumn";
+            this.de2_projekt_lagerverwaltungDataSet3.DataSetName = "de2_projekt_lagerverwaltungDataSet3";
+            this.de2_projekt_lagerverwaltungDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // artikelBindingSource
             // 
@@ -199,6 +192,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.textBox2);
@@ -217,15 +211,59 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Yellow;
+            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(16, 429);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(37, 23);
+            this.button3.TabIndex = 10;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(650, 431);
+            this.tabPage2.Size = new System.Drawing.Size(749, 462);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // artikelBindingSource1
+            // 
+            this.artikelBindingSource1.DataMember = "Artikel";
+            this.artikelBindingSource1.DataSource = this.de2projektlagerverwaltungDataSet3BindingSource;
+            // 
+            // artikelTableAdapter1
+            // 
+            this.artikelTableAdapter1.ClearBeforeFill = true;
+            // 
+            // artikelNrDataGridViewTextBoxColumn
+            // 
+            this.artikelNrDataGridViewTextBoxColumn.DataPropertyName = "Artikel_Nr";
+            this.artikelNrDataGridViewTextBoxColumn.HeaderText = "Artikel_Nr";
+            this.artikelNrDataGridViewTextBoxColumn.Name = "artikelNrDataGridViewTextBoxColumn";
+            this.artikelNrDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bezeichnungDataGridViewTextBoxColumn
+            // 
+            this.bezeichnungDataGridViewTextBoxColumn.DataPropertyName = "Bezeichnung";
+            this.bezeichnungDataGridViewTextBoxColumn.HeaderText = "Bezeichnung";
+            this.bezeichnungDataGridViewTextBoxColumn.Name = "bezeichnungDataGridViewTextBoxColumn";
+            // 
+            // beschreibungDataGridViewTextBoxColumn
+            // 
+            this.beschreibungDataGridViewTextBoxColumn.DataPropertyName = "Beschreibung";
+            this.beschreibungDataGridViewTextBoxColumn.HeaderText = "Beschreibung";
+            this.beschreibungDataGridViewTextBoxColumn.Name = "beschreibungDataGridViewTextBoxColumn";
+            // 
+            // bildDataGridViewImageColumn
+            // 
+            this.bildDataGridViewImageColumn.DataPropertyName = "Bild";
+            this.bildDataGridViewImageColumn.HeaderText = "Bild";
+            this.bildDataGridViewImageColumn.Name = "bildDataGridViewImageColumn";
             // 
             // Form1
             // 
@@ -237,11 +275,14 @@
             this.Text = "SQL Server 2005 Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2projektlagerverwaltungDataSet3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,13 +302,18 @@
         private de2_projekt_lagerverwaltungDataSet2 de2_projekt_lagerverwaltungDataSet2;
         private System.Windows.Forms.BindingSource artikelBindingSource;
         private SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet2TableAdapters.ArtikelTableAdapter artikelTableAdapter;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.BindingSource de2projektlagerverwaltungDataSet3BindingSource;
+        private de2_projekt_lagerverwaltungDataSet3 de2_projekt_lagerverwaltungDataSet3;
+        private System.Windows.Forms.BindingSource artikelBindingSource1;
+        private SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3TableAdapters.ArtikelTableAdapter artikelTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn artikelNrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bezeichnungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn beschreibungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn bildDataGridViewImageColumn;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
