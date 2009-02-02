@@ -16,3 +16,6 @@ E:\Projects\SQL_Gui_GridView\SQL_Gui_GridView\obj\Debug\ResolveAssemblyReference
 E:\Projects\SQL_Gui_GridView\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.Form1.resources
 E:\Projects\SQL_Gui_GridView\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.Properties.Resources.resources
 E:\Projects\SQL_Gui_GridView\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.csproj.GenerateResource.Cache
+C:\Projects\de2_-bung\SQL_Gui_GridView\bin\Debug\SQL_Gui_GridView.exe.config
+C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.exe
+C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.pdb
