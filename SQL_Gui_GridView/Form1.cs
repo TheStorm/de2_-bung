@@ -32,7 +32,10 @@ namespace SQL_Gui_GridView
         private void button1_Click(object sender, EventArgs e)
         {
             // Open predefined SQL Connection
-            Configuration.Connection.Open();
+            if (Configuration.Connection.State == ConnectionState.Closed)
+            {
+                Configuration.Connection.Open();
+            }
 
             // Build SQL Command
             string SqlString = "EXEC AddArtikel '" + textBox1.Text + "' , '" + textBox2.Text + "' , '" + textBox3.Text + "' ;";
@@ -41,10 +44,17 @@ namespace SQL_Gui_GridView
             SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
 
             // Fire it on the Server
-            cmd.ExecuteNonQuery();
+            try
+            {
+                cmd.ExecuteNonQuery(); // Exception needed
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a.ToString());
+            }
 
             // Refresh the GridView
-            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet2.Artikel);
+            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet.Artikel);
 
             // Close the SQL Connection
             Configuration.Connection.Close();
@@ -53,11 +63,15 @@ namespace SQL_Gui_GridView
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet3.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.artikelTableAdapter1.Fill(this.de2_projekt_lagerverwaltungDataSet3.Artikel);
-
-            // Auto generated GridView Loader
-            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet2.Artikel);
-        }   
+            try
+            {
+                this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet.Artikel);
+            }
+            catch (Exception m)
+            {
+                Console.WriteLine(m.ToString());
+            }
+        }
 
         private void ThreadLoader()
         {
@@ -71,16 +85,17 @@ namespace SQL_Gui_GridView
         {
             while (true)
             {
-                if (Configuration.Connection.State == ConnectionState.Open)
+                try
                 {
+                    Configuration.Connection.Open();
                     this.button3.BackColor = System.Drawing.Color.Green;
-                    Thread.Sleep(200);
                 }
-                else
+                catch (Exception l)
                 {
+                    Console.WriteLine(l.ToString());
                     this.button3.BackColor = System.Drawing.Color.Red;
-                    Thread.Sleep(200);
                 }
+                Thread.Sleep(1000);
             }
         }
     }

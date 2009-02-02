@@ -19,3 +19,9 @@ E:\Projects\SQL_Gui_GridView\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.csproj.
 C:\Projects\de2_-bung\SQL_Gui_GridView\bin\Debug\SQL_Gui_GridView.exe.config
 C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.exe
 C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.pdb
+C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.Form1.resources
+C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.Properties.Resources.resources
+C:\Projects\de2_-bung\SQL_Gui_GridView\obj\Debug\SQL_Gui_GridView.csproj.GenerateResource.Cache
+C:\Projects\de2_-bung\SQL_Gui_GridView\bin\Debug\SQL_Gui_GridView.exe
+C:\Projects\de2_-bung\SQL_Gui_GridView\bin\Debug\SQL_Gui_GridView.pdb

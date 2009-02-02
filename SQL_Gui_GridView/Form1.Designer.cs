@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,9 +43,18 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.de2_projekt_lagerverwaltungDataSet = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet();
+            this.artikelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.artikelTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSetTableAdapters.ArtikelTableAdapter();
+            this.artikelNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bezeichnungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beschreibungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bildDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -69,7 +79,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.artikelNrDataGridViewTextBoxColumn,
+            this.bezeichnungDataGridViewTextBoxColumn,
+            this.beschreibungDataGridViewTextBoxColumn,
+            this.bildDataGridViewImageColumn});
+            this.dataGridView1.DataSource = this.artikelBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(434, 75);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
@@ -183,6 +200,45 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // de2_projekt_lagerverwaltungDataSet
+            // 
+            this.de2_projekt_lagerverwaltungDataSet.DataSetName = "de2_projekt_lagerverwaltungDataSet";
+            this.de2_projekt_lagerverwaltungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // artikelBindingSource
+            // 
+            this.artikelBindingSource.DataMember = "Artikel";
+            this.artikelBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet;
+            // 
+            // artikelTableAdapter
+            // 
+            this.artikelTableAdapter.ClearBeforeFill = true;
+            // 
+            // artikelNrDataGridViewTextBoxColumn
+            // 
+            this.artikelNrDataGridViewTextBoxColumn.DataPropertyName = "Artikel_Nr";
+            this.artikelNrDataGridViewTextBoxColumn.HeaderText = "Artikel_Nr";
+            this.artikelNrDataGridViewTextBoxColumn.Name = "artikelNrDataGridViewTextBoxColumn";
+            this.artikelNrDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bezeichnungDataGridViewTextBoxColumn
+            // 
+            this.bezeichnungDataGridViewTextBoxColumn.DataPropertyName = "Bezeichnung";
+            this.bezeichnungDataGridViewTextBoxColumn.HeaderText = "Bezeichnung";
+            this.bezeichnungDataGridViewTextBoxColumn.Name = "bezeichnungDataGridViewTextBoxColumn";
+            // 
+            // beschreibungDataGridViewTextBoxColumn
+            // 
+            this.beschreibungDataGridViewTextBoxColumn.DataPropertyName = "Beschreibung";
+            this.beschreibungDataGridViewTextBoxColumn.HeaderText = "Beschreibung";
+            this.beschreibungDataGridViewTextBoxColumn.Name = "beschreibungDataGridViewTextBoxColumn";
+            // 
+            // bildDataGridViewImageColumn
+            // 
+            this.bildDataGridViewImageColumn.DataPropertyName = "Bild";
+            this.bildDataGridViewImageColumn.HeaderText = "Bild";
+            this.bildDataGridViewImageColumn.Name = "bildDataGridViewImageColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,8 +252,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).EndInit();
             this.ResumeLayout(false);
-
+            this.ThreadLoader();
         }
 
         #endregion
@@ -216,6 +274,13 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button3;
+        private de2_projekt_lagerverwaltungDataSet de2_projekt_lagerverwaltungDataSet;
+        private System.Windows.Forms.BindingSource artikelBindingSource;
+        private SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSetTableAdapters.ArtikelTableAdapter artikelTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn artikelNrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bezeichnungDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn beschreibungDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn bildDataGridViewImageColumn;
     }
 }
 
