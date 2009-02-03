@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Copyright by: Sebastian Danninger
+ * Date: 20.1.2009
+ * Function: MSSQL Client to trigger Stored Procedures on a remote/local Server
+ * Version: MSSQL 2005
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +24,7 @@ namespace SQL_Gui_GridView
         {
             InitializeComponent();
         }
+
         #region SQL Procedure Calls
         private void button1_Click(object sender, EventArgs e)
         {
@@ -60,7 +68,7 @@ namespace SQL_Gui_GridView
             }
 
             // Build SQL Command
-            string SqlString = "EXEC AddKunde '" + textBox6.Text + "' , '" + textBox11.Text + "' , '" + textBox10.Text + "' , '" + textBox9.Text + "' , '" + textBox8.Text + "' , '" + textBox7.Text + "' ;";
+            string SqlString = "EXEC AddKunde '" + textBox6.Text + "' , '" + textBox11.Text + "' , '" + textBox10.Text + "' , '" + textBox9.Text + "' , '" + textBox8.Text + "' , '" + comboBox1.Text + "' ;";
             
             // New Instance for SQL Commands
             SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
@@ -74,13 +82,45 @@ namespace SQL_Gui_GridView
             {
                 Console.WriteLine(a.ToString());
             }
-            
+
             // Refresh the GridView
             this.kundenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet2.Kunden);
 
             // Close the SQL Connection
             Configuration.Connection.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            // Open predefined SQL Connection
+            if (Configuration.Connection.State == ConnectionState.Closed)
+            {
+                Configuration.Connection.Open();
+            }
+
+            // Build SQL Command
+            string SqlString = "EXEC AddOrt '" + textBox12.Text + "' , '" + textBox13.Text + "' ;";
+            Console.WriteLine(SqlString);
+            // New Instance for SQL Commands
+            SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
+
+            // Fire it on the Server
+            try
+            {
+                cmd.ExecuteNonQuery(); // Exception needed
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a.ToString());
+            }
+
+            // Refresh the GridView
+            this.ortTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet3.Ort);
+
+            // Close the SQL Connection
+            Configuration.Connection.Close();
+        }
+
         #endregion
 
         #region auto generated + Thread
@@ -167,6 +207,8 @@ namespace SQL_Gui_GridView
 
         }
         #endregion
+
+
 
     }
 }

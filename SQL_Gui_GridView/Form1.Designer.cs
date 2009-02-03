@@ -52,7 +52,6 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -127,6 +126,7 @@
             this.ortTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3TableAdapters.OrtTableAdapter();
             this.rechnungspostenTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet4TableAdapters.RechnungspostenTableAdapter();
             this.rechnungTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet5TableAdapters.RechnungTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet1)).BeginInit();
@@ -302,12 +302,12 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.textBox11);
             this.tabPage2.Controls.Add(this.textBox10);
             this.tabPage2.Controls.Add(this.textBox9);
             this.tabPage2.Controls.Add(this.textBox8);
-            this.tabPage2.Controls.Add(this.textBox7);
             this.tabPage2.Controls.Add(this.textBox6);
             this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.dataGridView3);
@@ -339,14 +339,14 @@
             this.textBox11.Location = new System.Drawing.Point(104, 119);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(100, 20);
-            this.textBox11.TabIndex = 13;
+            this.textBox11.TabIndex = 9;
             // 
             // textBox10
             // 
             this.textBox10.Location = new System.Drawing.Point(104, 145);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 20);
-            this.textBox10.TabIndex = 12;
+            this.textBox10.TabIndex = 10;
             // 
             // textBox9
             // 
@@ -360,14 +360,7 @@
             this.textBox8.Location = new System.Drawing.Point(104, 197);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 10;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(104, 223);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 9;
+            this.textBox8.TabIndex = 12;
             // 
             // textBox6
             // 
@@ -545,6 +538,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "Execute";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView4
             // 
@@ -959,6 +953,16 @@
             // 
             this.rechnungTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.ortBindingSource;
+            this.comboBox1.DisplayMember = "Ort";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(104, 226);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1052,7 +1056,6 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView dataGridView4;
@@ -1103,6 +1106,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rechnungsdatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gezahltDatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bezahltSeitDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
