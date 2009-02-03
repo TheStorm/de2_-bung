@@ -83,15 +83,25 @@ namespace SQL_Gui_GridView
 
         private void status_checker()
         {
+            // Checks availability of the SQL Server and indicates by a button
             while (true)
             {
                 try
                 {
-                    Configuration.Connection.Open();
-                    this.button3.BackColor = System.Drawing.Color.Green;
+                    if (Configuration.Connection.State == ConnectionState.Open)
+                    {
+                        this.button3.BackColor = System.Drawing.Color.Green;
+                    }
+                    else
+                    {
+                        Configuration.Connection.Open();
+                        this.button3.BackColor = System.Drawing.Color.Green;
+                    }
                 }
                 catch (Exception l)
                 {
+
+                    // Debugging
                     Console.WriteLine(l.ToString());
                     this.button3.BackColor = System.Drawing.Color.Red;
                 }

@@ -32,6 +32,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.artikelNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bezeichnungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.beschreibungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bildDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.artikelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.de2_projekt_lagerverwaltungDataSet = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,18 +49,18 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.de2_projekt_lagerverwaltungDataSet = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet();
-            this.artikelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.artikelTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSetTableAdapters.ArtikelTableAdapter();
-            this.artikelNrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bezeichnungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.beschreibungDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bildDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectionSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -91,6 +97,41 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // artikelNrDataGridViewTextBoxColumn
+            // 
+            this.artikelNrDataGridViewTextBoxColumn.DataPropertyName = "Artikel_Nr";
+            this.artikelNrDataGridViewTextBoxColumn.HeaderText = "Artikel_Nr";
+            this.artikelNrDataGridViewTextBoxColumn.Name = "artikelNrDataGridViewTextBoxColumn";
+            this.artikelNrDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bezeichnungDataGridViewTextBoxColumn
+            // 
+            this.bezeichnungDataGridViewTextBoxColumn.DataPropertyName = "Bezeichnung";
+            this.bezeichnungDataGridViewTextBoxColumn.HeaderText = "Bezeichnung";
+            this.bezeichnungDataGridViewTextBoxColumn.Name = "bezeichnungDataGridViewTextBoxColumn";
+            // 
+            // beschreibungDataGridViewTextBoxColumn
+            // 
+            this.beschreibungDataGridViewTextBoxColumn.DataPropertyName = "Beschreibung";
+            this.beschreibungDataGridViewTextBoxColumn.HeaderText = "Beschreibung";
+            this.beschreibungDataGridViewTextBoxColumn.Name = "beschreibungDataGridViewTextBoxColumn";
+            // 
+            // bildDataGridViewImageColumn
+            // 
+            this.bildDataGridViewImageColumn.DataPropertyName = "Bild";
+            this.bildDataGridViewImageColumn.HeaderText = "Bild";
+            this.bildDataGridViewImageColumn.Name = "bildDataGridViewImageColumn";
+            // 
+            // artikelBindingSource
+            // 
+            this.artikelBindingSource.DataMember = "Artikel";
+            this.artikelBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet;
+            // 
+            // de2_projekt_lagerverwaltungDataSet
+            // 
+            this.de2_projekt_lagerverwaltungDataSet.DataSetName = "de2_projekt_lagerverwaltungDataSet";
+            this.de2_projekt_lagerverwaltungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -153,7 +194,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 1);
+            this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(757, 488);
@@ -161,6 +202,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.textBox1);
@@ -184,9 +226,9 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Yellow;
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(16, 429);
+            this.button3.Location = new System.Drawing.Point(86, 430);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(37, 23);
+            this.button3.Size = new System.Drawing.Size(19, 18);
             this.button3.TabIndex = 10;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -200,62 +242,72 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // de2_projekt_lagerverwaltungDataSet
-            // 
-            this.de2_projekt_lagerverwaltungDataSet.DataSetName = "de2_projekt_lagerverwaltungDataSet";
-            this.de2_projekt_lagerverwaltungDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // artikelBindingSource
-            // 
-            this.artikelBindingSource.DataMember = "Artikel";
-            this.artikelBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet;
-            // 
             // artikelTableAdapter
             // 
             this.artikelTableAdapter.ClearBeforeFill = true;
             // 
-            // artikelNrDataGridViewTextBoxColumn
+            // menuStrip1
             // 
-            this.artikelNrDataGridViewTextBoxColumn.DataPropertyName = "Artikel_Nr";
-            this.artikelNrDataGridViewTextBoxColumn.HeaderText = "Artikel_Nr";
-            this.artikelNrDataGridViewTextBoxColumn.Name = "artikelNrDataGridViewTextBoxColumn";
-            this.artikelNrDataGridViewTextBoxColumn.ReadOnly = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateiToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(755, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // bezeichnungDataGridViewTextBoxColumn
+            // dateiToolStripMenuItem
             // 
-            this.bezeichnungDataGridViewTextBoxColumn.DataPropertyName = "Bezeichnung";
-            this.bezeichnungDataGridViewTextBoxColumn.HeaderText = "Bezeichnung";
-            this.bezeichnungDataGridViewTextBoxColumn.Name = "bezeichnungDataGridViewTextBoxColumn";
+            this.dateiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connectionSettingsToolStripMenuItem,
+            this.quitToolStripMenuItem});
+            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
+            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.dateiToolStripMenuItem.Text = "Datei";
             // 
-            // beschreibungDataGridViewTextBoxColumn
+            // connectionSettingsToolStripMenuItem
             // 
-            this.beschreibungDataGridViewTextBoxColumn.DataPropertyName = "Beschreibung";
-            this.beschreibungDataGridViewTextBoxColumn.HeaderText = "Beschreibung";
-            this.beschreibungDataGridViewTextBoxColumn.Name = "beschreibungDataGridViewTextBoxColumn";
+            this.connectionSettingsToolStripMenuItem.Name = "connectionSettingsToolStripMenuItem";
+            this.connectionSettingsToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.connectionSettingsToolStripMenuItem.Text = "Connection Settings";
             // 
-            // bildDataGridViewImageColumn
+            // quitToolStripMenuItem
             // 
-            this.bildDataGridViewImageColumn.DataPropertyName = "Bild";
-            this.bildDataGridViewImageColumn.HeaderText = "Bild";
-            this.bildDataGridViewImageColumn.Name = "bildDataGridViewImageColumn";
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 433);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Server Status:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 487);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(755, 515);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "SQL Server 2005 Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.ThreadLoader();
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -281,6 +333,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bezeichnungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn beschreibungDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn bildDataGridViewImageColumn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectionSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
     }
 }
 
