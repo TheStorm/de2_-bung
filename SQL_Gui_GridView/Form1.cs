@@ -54,7 +54,7 @@ namespace SQL_Gui_GridView
             }
 
             // Refresh the GridView
-            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet.Artikel);
+            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
 
             // Close the SQL Connection
             Configuration.Connection.Close();
@@ -62,10 +62,12 @@ namespace SQL_Gui_GridView
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet1.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet3.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
             try
             {
-                this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet.Artikel);
+                this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
             }
             catch (Exception m)
             {
@@ -83,6 +85,7 @@ namespace SQL_Gui_GridView
 
         private void status_checker()
         {
+            Console.WriteLine("testtttt");
             // Checks availability of the SQL Server and indicates by a button
             while (true)
             {
@@ -107,6 +110,29 @@ namespace SQL_Gui_GridView
                 }
                 Thread.Sleep(1000);
             }
+        }
+
+        private void ConnectionSettings_Strip_Click(object sender, EventArgs e)
+        {
+            Form2 settings = new Form2();
+            settings.Show();
+        }
+
+        private void Quit_Strip_Click(object sender, EventArgs e)
+        {
+            Form1.ActiveForm.Close();
+            this.Close();
+        }
+
+        private void About_Strip_Click(object sender, EventArgs e)
+        {
+            Form3 about = new Form3();
+            about.Show();
+        }
+
+        private void Datei_Strip_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
