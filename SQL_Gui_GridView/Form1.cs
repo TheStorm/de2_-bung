@@ -100,7 +100,7 @@ namespace SQL_Gui_GridView
 
             // Build SQL Command
             string SqlString = "EXEC AddOrt '" + textBox12.Text + "' , '" + textBox13.Text + "' ;";
-            Console.WriteLine(SqlString);
+
             // New Instance for SQL Commands
             SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
 
@@ -121,13 +121,75 @@ namespace SQL_Gui_GridView
             Configuration.Connection.Close();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Open predefined SQL Connection
+            if (Configuration.Connection.State == ConnectionState.Closed)
+            {
+                Configuration.Connection.Open();
+            }
+
+            // Build SQL Command
+            string SqlString = "EXEC AddBestellung '" + comboBox2.Text + "' , '" + textBox5.Text + "' ;";
+            Console.WriteLine(SqlString);
+            // New Instance for SQL Commands
+            SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
+
+            // Fire it on the Server
+            try
+            {
+                cmd.ExecuteNonQuery(); // Exception needed
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a.ToString());
+            }
+
+            // Refresh the GridView
+            this.rechnungTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet6.Rechnung);
+
+            // Close the SQL Connection
+            Configuration.Connection.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Open predefined SQL Connection
+            if (Configuration.Connection.State == ConnectionState.Closed)
+            {
+                Configuration.Connection.Open();
+            }
+
+            // Build SQL Command
+            string SqlString = "EXEC AddPostenZuBestellung'" + textBox14.Text + "' , '" + textBox15.Text + "' , '" + textBox16.Text + "' ;";
+
+            // New Instance for SQL Commands
+            SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
+
+            // Fire it on the Server
+            try
+            {
+                cmd.ExecuteNonQuery(); // Exception needed
+            }
+            catch (Exception a)
+            {
+                Console.WriteLine(a.ToString());
+            }
+
+            // Refresh the GridView
+            this.rechnungspostenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet4.Rechnungsposten);
+
+            // Close the SQL Connection
+            Configuration.Connection.Close();
+        }
+
         #endregion
 
         #region auto generated + Thread
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet5.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.rechnungTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet5.Rechnung);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet6.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.rechnungTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet6.Rechnung);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet4.Rechnungsposten". Sie können sie bei Bedarf verschieben oder entfernen.
             this.rechnungspostenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet4.Rechnungsposten);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet3.Ort". Sie können sie bei Bedarf verschieben oder entfernen.
@@ -137,44 +199,6 @@ namespace SQL_Gui_GridView
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet1.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
             this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
         }
-
-        /*
-        private void ThreadLoader()
-        {
-            ThreadStart threadDelegate;
-            threadDelegate = new ThreadStart(status_checker);
-            Thread status = new Thread(threadDelegate);
-            status.Start();
-        }
-
-        private void status_checker()
-        {
-            Console.WriteLine("testtttt");
-            // Checks availability of the SQL Server and indicates by a button
-            while (true)
-            {
-                try
-                {
-                    if (Configuration.Connection.State == ConnectionState.Open)
-                    {
-                        this.button3.BackColor = System.Drawing.Color.Green;
-                    }
-                    else
-                    {
-                        Configuration.Connection.Open();
-                        this.button3.BackColor = System.Drawing.Color.Green;
-                    }
-                }
-                catch (Exception l)
-                {
-
-                    // Debugging
-                    Console.WriteLine(l.ToString());
-                    this.button3.BackColor = System.Drawing.Color.Red;
-                }
-                Thread.Sleep(1000);
-            }
-        }*/
         #endregion
 
         #region Menu
@@ -196,19 +220,7 @@ namespace SQL_Gui_GridView
             Form3 about = new Form3();
             about.Show();
         }
-
-        private void Datei_Strip_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
         #endregion
-
-
 
     }
 }

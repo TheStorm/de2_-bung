@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>de2_projekt_lagerverwaltungDataSet5.xsd</DependentUpon>
     </Compile>
+    <Compile Include="de2_projekt_lagerverwaltungDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>de2_projekt_lagerverwaltungDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +191,17 @@
     </None>
     <None Include="de2_projekt_lagerverwaltungDataSet5.xss">
       <DependentUpon>de2_projekt_lagerverwaltungDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="de2_projekt_lagerverwaltungDataSet6.xsc">
+      <DependentUpon>de2_projekt_lagerverwaltungDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="de2_projekt_lagerverwaltungDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>de2_projekt_lagerverwaltungDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="de2_projekt_lagerverwaltungDataSet6.xss">
+      <DependentUpon>de2_projekt_lagerverwaltungDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

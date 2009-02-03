@@ -47,6 +47,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ortBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.de2_projekt_lagerverwaltungDataSet3 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3();
             this.label20 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
@@ -77,8 +80,6 @@
             this.ortNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pLZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ortDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ortBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.de2_projekt_lagerverwaltungDataSet3 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -94,8 +95,8 @@
             this.postenbetragDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rechnungspostenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.de2_projekt_lagerverwaltungDataSet4 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet4();
-            this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -103,17 +104,9 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.rechnungNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kundenNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rechnungsdatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gezahltDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bezahltSeitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rechnungBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.de2_projekt_lagerverwaltungDataSet5 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet5();
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Datei_Strip = new System.Windows.Forms.ToolStripMenuItem();
@@ -125,30 +118,37 @@
             this.kundenTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet2TableAdapters.KundenTableAdapter();
             this.ortTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet3TableAdapters.OrtTableAdapter();
             this.rechnungspostenTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet4TableAdapters.RechnungspostenTableAdapter();
-            this.rechnungTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet5TableAdapters.RechnungTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.de2_projekt_lagerverwaltungDataSet6 = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet6();
+            this.rechnungBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rechnungTableAdapter = new SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet6TableAdapters.RechnungTableAdapter();
+            this.rechnungNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kundenNrDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rechnungsdatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gezahltDatumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bezahltSeitDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.artikelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ortBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kundenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ortBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet3)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rechnungspostenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet4)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechnungBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet5)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechnungBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -324,6 +324,26 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "AddKunde";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.ortBindingSource;
+            this.comboBox1.DisplayMember = "Ort";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(104, 226);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // ortBindingSource
+            // 
+            this.ortBindingSource.DataMember = "Ort";
+            this.ortBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet3;
+            // 
+            // de2_projekt_lagerverwaltungDataSet3
+            // 
+            this.de2_projekt_lagerverwaltungDataSet3.DataSetName = "de2_projekt_lagerverwaltungDataSet3";
+            this.de2_projekt_lagerverwaltungDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label20
             // 
@@ -573,16 +593,6 @@
             this.ortDataGridViewTextBoxColumn.HeaderText = "Ort";
             this.ortDataGridViewTextBoxColumn.Name = "ortDataGridViewTextBoxColumn";
             // 
-            // ortBindingSource
-            // 
-            this.ortBindingSource.DataMember = "Ort";
-            this.ortBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet3;
-            // 
-            // de2_projekt_lagerverwaltungDataSet3
-            // 
-            this.de2_projekt_lagerverwaltungDataSet3.DataSetName = "de2_projekt_lagerverwaltungDataSet3";
-            this.de2_projekt_lagerverwaltungDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // textBox13
             // 
             this.textBox13.Location = new System.Drawing.Point(84, 135);
@@ -620,8 +630,8 @@
             this.tabPage4.Controls.Add(this.label22);
             this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.dataGridView5);
-            this.tabPage4.Controls.Add(this.textBox16);
             this.tabPage4.Controls.Add(this.textBox15);
+            this.tabPage4.Controls.Add(this.textBox16);
             this.tabPage4.Controls.Add(this.textBox14);
             this.tabPage4.Controls.Add(this.label19);
             this.tabPage4.Controls.Add(this.label18);
@@ -633,7 +643,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "AddPosten";
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // label22
             // 
@@ -652,6 +661,7 @@
             this.button6.TabIndex = 7;
             this.button6.Text = "Execute";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dataGridView5
             // 
@@ -710,19 +720,19 @@
             this.de2_projekt_lagerverwaltungDataSet4.DataSetName = "de2_projekt_lagerverwaltungDataSet4";
             this.de2_projekt_lagerverwaltungDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(108, 134);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(99, 20);
-            this.textBox16.TabIndex = 5;
-            // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(108, 168);
+            this.textBox15.Location = new System.Drawing.Point(108, 134);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(99, 20);
-            this.textBox15.TabIndex = 4;
+            this.textBox15.TabIndex = 5;
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(108, 168);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(99, 20);
+            this.textBox16.TabIndex = 4;
             // 
             // textBox14
             // 
@@ -760,9 +770,9 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.comboBox2);
             this.tabPage5.Controls.Add(this.label8);
             this.tabPage5.Controls.Add(this.textBox5);
-            this.tabPage5.Controls.Add(this.textBox4);
             this.tabPage5.Controls.Add(this.label7);
             this.tabPage5.Controls.Add(this.label6);
             this.tabPage5.Controls.Add(this.dataGridView2);
@@ -790,13 +800,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 16;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(137, 113);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 15;
             // 
             // label7
             // 
@@ -832,48 +835,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(240, 150);
             this.dataGridView2.TabIndex = 12;
             // 
-            // rechnungNrDataGridViewTextBoxColumn1
-            // 
-            this.rechnungNrDataGridViewTextBoxColumn1.DataPropertyName = "Rechnung_Nr";
-            this.rechnungNrDataGridViewTextBoxColumn1.HeaderText = "Rechnung_Nr";
-            this.rechnungNrDataGridViewTextBoxColumn1.Name = "rechnungNrDataGridViewTextBoxColumn1";
-            this.rechnungNrDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // kundenNrDataGridViewTextBoxColumn1
-            // 
-            this.kundenNrDataGridViewTextBoxColumn1.DataPropertyName = "Kunden_Nr";
-            this.kundenNrDataGridViewTextBoxColumn1.HeaderText = "Kunden_Nr";
-            this.kundenNrDataGridViewTextBoxColumn1.Name = "kundenNrDataGridViewTextBoxColumn1";
-            // 
-            // rechnungsdatumDataGridViewTextBoxColumn
-            // 
-            this.rechnungsdatumDataGridViewTextBoxColumn.DataPropertyName = "Rechnungsdatum";
-            this.rechnungsdatumDataGridViewTextBoxColumn.HeaderText = "Rechnungsdatum";
-            this.rechnungsdatumDataGridViewTextBoxColumn.Name = "rechnungsdatumDataGridViewTextBoxColumn";
-            // 
-            // gezahltDatumDataGridViewTextBoxColumn
-            // 
-            this.gezahltDatumDataGridViewTextBoxColumn.DataPropertyName = "GezahltDatum";
-            this.gezahltDatumDataGridViewTextBoxColumn.HeaderText = "GezahltDatum";
-            this.gezahltDatumDataGridViewTextBoxColumn.Name = "gezahltDatumDataGridViewTextBoxColumn";
-            // 
-            // bezahltSeitDataGridViewTextBoxColumn
-            // 
-            this.bezahltSeitDataGridViewTextBoxColumn.DataPropertyName = "BezahltSeit";
-            this.bezahltSeitDataGridViewTextBoxColumn.HeaderText = "BezahltSeit";
-            this.bezahltSeitDataGridViewTextBoxColumn.Name = "bezahltSeitDataGridViewTextBoxColumn";
-            this.bezahltSeitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // rechnungBindingSource
-            // 
-            this.rechnungBindingSource.DataMember = "Rechnung";
-            this.rechnungBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet5;
-            // 
-            // de2_projekt_lagerverwaltungDataSet5
-            // 
-            this.de2_projekt_lagerverwaltungDataSet5.DataSetName = "de2_projekt_lagerverwaltungDataSet5";
-            this.de2_projekt_lagerverwaltungDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(78, 191);
@@ -882,6 +843,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Execute";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuStrip1
             // 
@@ -902,7 +864,6 @@
             this.Datei_Strip.Name = "Datei_Strip";
             this.Datei_Strip.Size = new System.Drawing.Size(46, 20);
             this.Datei_Strip.Text = "&Datei";
-            this.Datei_Strip.Click += new System.EventHandler(this.Datei_Strip_Click);
             // 
             // ConnectionSettings_Strip
             // 
@@ -949,19 +910,61 @@
             // 
             this.rechnungspostenTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.kundenBindingSource;
+            this.comboBox2.DisplayMember = "Kunden_Nr";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(137, 113);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 21);
+            this.comboBox2.TabIndex = 18;
+            // 
+            // de2_projekt_lagerverwaltungDataSet6
+            // 
+            this.de2_projekt_lagerverwaltungDataSet6.DataSetName = "de2_projekt_lagerverwaltungDataSet6";
+            this.de2_projekt_lagerverwaltungDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rechnungBindingSource
+            // 
+            this.rechnungBindingSource.DataMember = "Rechnung";
+            this.rechnungBindingSource.DataSource = this.de2_projekt_lagerverwaltungDataSet6;
+            // 
             // rechnungTableAdapter
             // 
             this.rechnungTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBox1
+            // rechnungNrDataGridViewTextBoxColumn1
             // 
-            this.comboBox1.DataSource = this.ortBindingSource;
-            this.comboBox1.DisplayMember = "Ort";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(104, 226);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 15;
+            this.rechnungNrDataGridViewTextBoxColumn1.DataPropertyName = "Rechnung_Nr";
+            this.rechnungNrDataGridViewTextBoxColumn1.HeaderText = "Rechnung_Nr";
+            this.rechnungNrDataGridViewTextBoxColumn1.Name = "rechnungNrDataGridViewTextBoxColumn1";
+            this.rechnungNrDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // kundenNrDataGridViewTextBoxColumn1
+            // 
+            this.kundenNrDataGridViewTextBoxColumn1.DataPropertyName = "Kunden_Nr";
+            this.kundenNrDataGridViewTextBoxColumn1.HeaderText = "Kunden_Nr";
+            this.kundenNrDataGridViewTextBoxColumn1.Name = "kundenNrDataGridViewTextBoxColumn1";
+            // 
+            // rechnungsdatumDataGridViewTextBoxColumn
+            // 
+            this.rechnungsdatumDataGridViewTextBoxColumn.DataPropertyName = "Rechnungsdatum";
+            this.rechnungsdatumDataGridViewTextBoxColumn.HeaderText = "Rechnungsdatum";
+            this.rechnungsdatumDataGridViewTextBoxColumn.Name = "rechnungsdatumDataGridViewTextBoxColumn";
+            // 
+            // gezahltDatumDataGridViewTextBoxColumn
+            // 
+            this.gezahltDatumDataGridViewTextBoxColumn.DataPropertyName = "GezahltDatum";
+            this.gezahltDatumDataGridViewTextBoxColumn.HeaderText = "GezahltDatum";
+            this.gezahltDatumDataGridViewTextBoxColumn.Name = "gezahltDatumDataGridViewTextBoxColumn";
+            // 
+            // bezahltSeitDataGridViewTextBoxColumn
+            // 
+            this.bezahltSeitDataGridViewTextBoxColumn.DataPropertyName = "BezahltSeit";
+            this.bezahltSeitDataGridViewTextBoxColumn.HeaderText = "BezahltSeit";
+            this.bezahltSeitDataGridViewTextBoxColumn.Name = "bezahltSeitDataGridViewTextBoxColumn";
+            this.bezahltSeitDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Form1
             // 
@@ -982,14 +985,14 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ortBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kundenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ortBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet3)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
@@ -998,10 +1001,10 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rechnungBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet5)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.de2_projekt_lagerverwaltungDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rechnungBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1047,7 +1050,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -1063,8 +1065,8 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
@@ -1098,15 +1100,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rechnungNrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn anzahlDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn postenbetragDataGridViewTextBoxColumn;
-        private de2_projekt_lagerverwaltungDataSet5 de2_projekt_lagerverwaltungDataSet5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private de2_projekt_lagerverwaltungDataSet6 de2_projekt_lagerverwaltungDataSet6;
         private System.Windows.Forms.BindingSource rechnungBindingSource;
-        private SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet5TableAdapters.RechnungTableAdapter rechnungTableAdapter;
+        private SQL_Gui_GridView.de2_projekt_lagerverwaltungDataSet6TableAdapters.RechnungTableAdapter rechnungTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn rechnungNrDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn kundenNrDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn rechnungsdatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gezahltDatumDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bezahltSeitDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
