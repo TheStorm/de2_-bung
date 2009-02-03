@@ -17,18 +17,7 @@ namespace SQL_Gui_GridView
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // hardcore OOP Programming ;-)
-            Application.Exit();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        #region SQL Procedure Calls
         private void button1_Click(object sender, EventArgs e)
         {
             // Open predefined SQL Connection
@@ -60,21 +49,56 @@ namespace SQL_Gui_GridView
             Configuration.Connection.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet1.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet3.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
+            // AddKunde
+
+            // Open predefined SQL Connection
+            if (Configuration.Connection.State == ConnectionState.Closed)
+            {
+                Configuration.Connection.Open();
+            }
+
+            // Build SQL Command
+            string SqlString = "EXEC AddKunde '" + textBox6.Text + "' , '" + textBox11.Text + "' , '" + textBox10.Text + "' , '" + textBox9.Text + "' , '" + textBox8.Text + "' , '" + textBox7.Text + "' ;";
+            
+            // New Instance for SQL Commands
+            SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
+
+            // Fire it on the Server
             try
             {
-                this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
+                cmd.ExecuteNonQuery(); // Exception needed
             }
-            catch (Exception m)
+            catch (Exception a)
             {
-                Console.WriteLine(m.ToString());
+                Console.WriteLine(a.ToString());
             }
+            
+            // Refresh the GridView
+            this.kundenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet2.Kunden);
+
+            // Close the SQL Connection
+            Configuration.Connection.Close();
+        }
+        #endregion
+
+        #region auto generated + Thread
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet5.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.rechnungTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet5.Rechnung);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet4.Rechnungsposten". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.rechnungspostenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet4.Rechnungsposten);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet3.Ort". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.ortTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet3.Ort);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet2.Kunden". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.kundenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet2.Kunden);
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet1.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
         }
 
+        /*
         private void ThreadLoader()
         {
             ThreadStart threadDelegate;
@@ -110,8 +134,10 @@ namespace SQL_Gui_GridView
                 }
                 Thread.Sleep(1000);
             }
-        }
+        }*/
+        #endregion
 
+        #region Menu
         private void ConnectionSettings_Strip_Click(object sender, EventArgs e)
         {
             Form2 settings = new Form2();
@@ -122,6 +148,7 @@ namespace SQL_Gui_GridView
         {
             Form1.ActiveForm.Close();
             this.Close();
+            Application.Exit();
         }
 
         private void About_Strip_Click(object sender, EventArgs e)
@@ -134,5 +161,12 @@ namespace SQL_Gui_GridView
         {
 
         }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
     }
 }
