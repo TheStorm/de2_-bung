@@ -185,7 +185,7 @@ namespace SQL_Gui_GridView
 
         #endregion
 
-        #region auto generated + Thread
+        #region auto generated + Menu
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet6.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
@@ -199,9 +199,7 @@ namespace SQL_Gui_GridView
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet1.Artikel". Sie können sie bei Bedarf verschieben oder entfernen.
             this.artikelTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet1.Artikel);
         }
-        #endregion
 
-        #region Menu
         private void ConnectionSettings_Strip_Click(object sender, EventArgs e)
         {
             Form2 settings = new Form2();
