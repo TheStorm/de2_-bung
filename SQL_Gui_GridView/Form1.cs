@@ -120,78 +120,11 @@ namespace SQL_Gui_GridView
             // Close the SQL Connection
             Configuration.Connection.Close();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // Open predefined SQL Connection
-            if (Configuration.Connection.State == ConnectionState.Closed)
-            {
-                Configuration.Connection.Open();
-            }
-
-            // Build SQL Command
-            string SqlString = "EXEC AddBestellung '" + comboBox2.Text + "' , '" + textBox5.Text + "' ;";
-            Console.WriteLine(SqlString);
-            // New Instance for SQL Commands
-            SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
-
-            // Fire it on the Server
-            try
-            {
-                cmd.ExecuteNonQuery(); // Exception needed
-            }
-            catch (Exception a)
-            {
-                Console.WriteLine(a.ToString());
-            }
-
-            // Refresh the GridView
-            this.rechnungTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet6.Rechnung);
-
-            // Close the SQL Connection
-            Configuration.Connection.Close();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            // Open predefined SQL Connection
-            if (Configuration.Connection.State == ConnectionState.Closed)
-            {
-                Configuration.Connection.Open();
-            }
-
-            // Build SQL Command
-            string SqlString = "EXEC AddPostenZuBestellung'" + textBox14.Text + "' , '" + textBox15.Text + "' , '" + textBox16.Text + "' ;";
-
-            // New Instance for SQL Commands
-            SqlCommand cmd = new SqlCommand(SqlString, Configuration.Connection);
-
-            // Fire it on the Server
-            try
-            {
-                cmd.ExecuteNonQuery(); // Exception needed
-            }
-            catch (Exception a)
-            {
-                Console.WriteLine(a.ToString());
-            }
-
-            // Refresh the GridView
-            this.rechnungspostenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet4.Rechnungsposten);
-
-            // Close the SQL Connection
-            Configuration.Connection.Close();
-        }
-
         #endregion
 
         #region auto generated + Menu
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet6.Rechnung". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.rechnungTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet6.Rechnung);
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet4.Rechnungsposten". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.rechnungspostenTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet4.Rechnungsposten);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet3.Ort". Sie können sie bei Bedarf verschieben oder entfernen.
             this.ortTableAdapter.Fill(this.de2_projekt_lagerverwaltungDataSet3.Ort);
             // TODO: Diese Codezeile lädt Daten in die Tabelle "de2_projekt_lagerverwaltungDataSet2.Kunden". Sie können sie bei Bedarf verschieben oder entfernen.
